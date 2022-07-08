@@ -9,6 +9,7 @@ container.setAttribute('class', 'container')
 app.appendChild(logo)
 app.appendChild(container)
 
+
 var request = new XMLHttpRequest()
 request.open('GET', 'https://dog.ceo/api/breed/shiba/images', true)
 request.onload = function () {
@@ -24,12 +25,16 @@ request.onload = function () {
       const h1 = document.createElement('h1')
       h1.textContent = "Shiba Inu"
 
+      const p = document.createElement('p')
+      p.textContent = "Shiba Inus are amazing dogs!"
+
       const img = document.createElement('img')
       img.src = image;
 
       container.appendChild(card)
       card.appendChild(h1)
       card.appendChild(img)
+      card.appendChild(p)
     })
   } else {
     const errorMessage = document.createElement('marquee')
